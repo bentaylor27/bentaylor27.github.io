@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+
+body {
+    background-image: url("https://media.moddb.com/images/groups/1/4/3338/grass3_blur.jpg");
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.instructions, footer {
+    text-align: center;
+    color: ghostwhite;
+}
+
+.instructions {
+    background-color: black;
+    width: 700px;
+    margin: auto;
+}
+
+#header {
+    position: relative;
+    background-color: rgb(0, 156, 207);
+    color: ghostwhite;
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.scoreboard {
+    text-align: center;
+    background-color: orange;
+    color: ghostwhite;
+    border-style: solid;
+    display: table;
+    margin: auto;
+    font-weight: bold;
+}
+
+footer {
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+a {
+    color: ghostwhite;
+  }
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    display: inline-flex;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+    background-color: red;
+}
+
+.gameBoard {
+    background-color: gold;
+    border: 1px solid black;
+}
