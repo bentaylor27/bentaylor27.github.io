@@ -51,6 +51,7 @@ a {
     font-weight: bold;
     padding: 5px;
     color: white;
+    font-size: larger;
 }
 
 #goUp, #goDown {
@@ -63,8 +64,10 @@ a {
 .gameBoard {
     background-color: gold;
     border: 1px solid black;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
-    padding: 10px;
-    color: red;
+    text-align: justify;
+    color: white;
+    padding: 20px;
+    width: 100%;
 }
