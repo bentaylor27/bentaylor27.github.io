@@ -61,13 +61,13 @@ a {
     flex-direction: column;
 }
 
-.gameBoard {
+.footballField {
     background-color: gold;
     border: 1px solid black;
-    display: inline-block;
+    display: inline;
     flex-direction: row;
     text-align: justify;
     color: white;
     padding: 20px;
-    width: 100%;
+    margin: 0px;
 }
