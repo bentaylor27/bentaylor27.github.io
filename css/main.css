@@ -32,8 +32,9 @@ body {
     color: ghostwhite;
     border-style: solid;
     display: table;
-    margin: auto;
+    margin: 0 auto;
     font-weight: bold;
+    padding: 25px;
 }
 
 footer {
@@ -47,11 +48,15 @@ a {
 
 .buttons {
     display: flex;
-    display: inline-flex;
+    display: block;
     font-weight: bold;
-    padding: 5px;
+    padding: 40px;
     color: white;
     font-size: larger;
+}
+
+#goRight {
+    background-color: orange;
 }
 
 #goUp, #goDown {
@@ -63,11 +68,21 @@ a {
 
 .footballField {
     background-color: gold;
-    border: 1px solid black;
+    border: 5px solid black;
     display: inline;
     flex-direction: row;
-    text-align: justify;
+    text-align: center;
     color: white;
-    padding: 20px;
-    margin: 0px;
+    padding: 25px;
+    margin: 50px -10px 50px -10px;
+}
+
+.container {
+    background-color: rgb(220, 227, 225);
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    border-radius: 25px;
+    contain: strict;
+    padding: 40px;
 }
