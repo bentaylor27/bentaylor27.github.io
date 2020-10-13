@@ -47,15 +47,24 @@ a {
 
 .buttons {
     display: flex;
-    flex-direction: column;
     display: inline-flex;
     font-weight: bold;
     padding: 5px;
     color: white;
+}
+
+#goUp, #goDown {
     background-color: red;
+    display: flex;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .gameBoard {
     background-color: gold;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    color: red;
 }
