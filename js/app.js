@@ -1,12 +1,30 @@
 //console.log("git er done!")
 
-const speed = 1
-const direction = 1
-
-let myPlayer = document.getElementById(player);
+//let myPlayer = document.getElementById(player);
 
 //defined the click event for all 3 buttons in lines 54-56
 
-myPlayer.addEventListener('click', function (run) {
-    run()
-})
+
+//Grid layout and player movements from Stack Overflow: https://stackoverflow.com/questions/58162481/move-element-in-a-grid-layout-with-arrow-keys
+
+
+const footballField = document.querySelector(".field");
+const gridBoxes = document.querySelectorAll(".fieldGrid");
+const gridArray = Array.from(gridBoxes);
+let player = document.createElement("div");
+let position = {x: 0, y: 0};
+
+function makeGrid (rows, columns) {
+    container.style.setProperty("--grid-rows", rows);
+    container.style.setProperty("--grid-columns", columns);
+    let x = 0;
+    let y = 0;
+    for (let c = 0; c < rows * columns; c++) {
+        let cell = document.createElement("div");
+        y = c%columns;
+        if (y === (rows - 1)) {
+            x++;
+        }
+        container.appendChild(cell).className = "fieldGrid fieldGrid-" + x + y;
+    }
+}
