@@ -19,9 +19,9 @@ function makeGrid (rows, columns) {
     container.style.setProperty("--grid-columns", columns);
     let x = 0;
     let y = 0;
-    for (let c = 0; c < rows * columns; c++) {
+    for (let c = 0; i < rows * columns; i++) {
         let cell = document.createElement("div");
-        y = c%columns;
+        y = i%columns;
         if (y === (rows - 1)) {
             x++;
         }
