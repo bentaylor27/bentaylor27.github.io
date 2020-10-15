@@ -29,7 +29,7 @@ const keys = {
   right: 39,
   down: 40
 };
-makeGrid(16, 16);
+makeGrid(3, 12);
 circle.style.width = "20px";
 circle.style.height = "20px";
 circle.style.backgroundColor = "#000";
