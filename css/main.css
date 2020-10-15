@@ -81,7 +81,6 @@ a {
     border: 5px solid black;
     display: inline-grid;
     grid-template-columns: 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33%;
-    
     grid-row-gap: .5px;
     grid-column-gap: 1px;
     color: black;
@@ -112,4 +111,6 @@ a {
     width: 30px;
     height: 10px;
     background-color: black;
+    padding: 1px;
+    margin: 15px;
 }
