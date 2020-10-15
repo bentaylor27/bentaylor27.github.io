@@ -28,3 +28,11 @@ function makeGrid (rows, columns) {
         container.appendChild(cell).className = "fieldGrid fieldGrid-" + x + y;
     }
 }
+
+const arrows = {
+    up: 38,
+    right: 39,
+    down: 40,
+}
+
+makeGrid(3, 12);
