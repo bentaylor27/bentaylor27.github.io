@@ -46,23 +46,27 @@ player.style.backgroundColor = "orange";
 let firstFieldGrid = document.querySelector("fieldGrid");
 firstFieldGrid.appendChild(player);
 
-function arrowKey(z) {
-    switch (z.keyCode) {
-        case keys.right:
-            position.y++;
-            break;
-        case keys.up:
-            position.x--;
-            break;
-        case keys.down:
-            position.x++;
-            break;
-    }
-    let fieldGrid = document.querySelector(".fieldGrid" + position.x + '' + position.y);
-    fieldGrid.appendChild(player);
-}
+// function arrowKey(z) {
+//     switch (z.keyCode) {
+//         case keys.right:
+//             position.y++;
+//             break;
+//         case keys.up:
+//             position.x--;
+//             break;
+//         case keys.down:
+//             position.x++;
+//             break;
+//     }
+//     let fieldGrid = document.querySelector(".fieldGrid" + position.x + '' + position.y);
+//     fieldGrid.appendChild(player);
+// }
 
-window.addEventListener("keydown", arrowKey);
+// window.addEventListener("keydown", arrowKey);
+
+button.addEventListener("click", playerMove);
+
+
 
 //scoreboard layout from https://stackoverflow.com/questions/53946426/scoreboard-design-using-html-and-css and functionality from https://stackoverflow.com/questions/28822849/scoreboard-object-in-javascript
 
