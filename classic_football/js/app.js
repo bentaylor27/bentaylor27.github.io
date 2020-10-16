@@ -8,18 +8,20 @@
 //Grid layout and player movements from Stack Overflow: https://stackoverflow.com/questions/58162481/move-element-in-a-grid-layout-with-arrow-keys
 
 
-const footballField = document.querySelector(".field");
+const container = document.querySelector(".field");
 const gridBoxes = document.querySelectorAll(".fieldGrid");
 const gridArray = Array.from(gridBoxes);
 let player = document.createElement("div");
 let position = {x: 0, y: 0};
+
+//function to create grid
 
 function makeGrid (rows, columns) {
     container.style.setProperty("--grid-rows", rows);
     container.style.setProperty("--grid-columns", columns);
     let x = 0;
     let y = 0;
-    for (let c = 0; i < rows * columns; i++) {
+    for (let i = 0; i < rows * columns; i++) {
         let cell = document.createElement("div");
         y = i%columns;
         if (y === (rows - 1)) {
@@ -28,6 +30,8 @@ function makeGrid (rows, columns) {
         container.appendChild(cell).className = "fieldGrid fieldGrid-" + x + y;
     }
 }
+
+//initializing arrow keys to use in game
 
 const arrows = {
     up: 38,
