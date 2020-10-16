@@ -36,3 +36,26 @@ const arrows = {
 }
 
 makeGrid(3, 12);
+player.style.width = "30px";
+player.style.height = "10px";
+player.style.backgroundColor = "orange";
+let firstFieldGrid = document.querySelector("fieldGrid");
+firstFieldGrid.appendChild(player);
+
+function arrowKey(z) {
+    switch (z.keyCode) {
+        case keys.right:
+            position.y++;
+            break;
+        case keys.up:
+            position.x--;
+            break;
+        case keys.down:
+            position.x++;
+            break;
+    }
+    let fieldGrid = document.querySelector(".fieldGrid" + position.x + '' + position.y);
+    fieldGrid.appendChild(player);
+}
+
+window.addEventListener("keydown", arrowKey);
