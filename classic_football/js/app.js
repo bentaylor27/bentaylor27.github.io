@@ -63,3 +63,12 @@ function arrowKey(z) {
 }
 
 window.addEventListener("keydown", arrowKey);
+
+//scoreboard layout from https://stackoverflow.com/questions/53946426/scoreboard-design-using-html-and-css and functionality from https://stackoverflow.com/questions/28822849/scoreboard-object-in-javascript
+
+const scoreboard = function (score) {
+    this.score = score;
+    scoreboard.touchdown = function () {
+        console.log(this.score + 6)
+    }
+}
