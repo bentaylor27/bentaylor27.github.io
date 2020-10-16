@@ -58,3 +58,4 @@ function handleKey(e) {
   gridItem.appendChild(circle);
 }
 window.addEventListener("keydown", handleKey);
+

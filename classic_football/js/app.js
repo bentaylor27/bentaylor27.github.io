@@ -11,6 +11,7 @@
 const container = document.querySelector(".field");
 const gridBoxes = document.querySelectorAll(".fieldGrid");
 const gridArray = Array.from(gridBoxes);
+const button = document.getElementById(".buttons")
 let player = document.createElement("div");
 let position = {x: 0, y: 0};
 
@@ -65,7 +66,9 @@ firstFieldGrid.appendChild(player);
 // window.addEventListener("keydown", arrowKey);
 
 button.addEventListener("click", playerMove);
-
+function playerMove () {
+    let fieldGrid = document.querySelector(".fieldGrid" + position.x + "" + position.y);
+}
 
 
 //scoreboard layout from https://stackoverflow.com/questions/53946426/scoreboard-design-using-html-and-css and functionality from https://stackoverflow.com/questions/28822849/scoreboard-object-in-javascript
