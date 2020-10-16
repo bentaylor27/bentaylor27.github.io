@@ -1,10 +1,3 @@
-//console.log("git er done!")
-
-//let myPlayer = document.getElementById(player);
-
-//defined the click event for all 3 buttons in lines 54-56
-
-
 //Grid layout and player movements from Stack Overflow: https://stackoverflow.com/questions/58162481/move-element-in-a-grid-layout-with-arrow-keys
 
 
@@ -15,11 +8,11 @@ const button = document.getElementById(".buttons")
 let player = document.createElement("div");
 let position = {x: 0, y: 0};
 
-//function to create grid
+//function to make grid
 
 function makeGrid (rows, columns) {
-    container.style.setProperty("--grid-rows", rows);
-    container.style.setProperty("--grid-columns", columns);
+    container.style.setProperty("grid-rows", rows);
+    container.style.setProperty("grid-columns", columns);
     let x = 0;
     let y = 0;
     for (let i = 0; i < rows * columns; i++) {
@@ -28,11 +21,11 @@ function makeGrid (rows, columns) {
         if (y === (rows - 1)) {
             x++;
         }
-        container.appendChild(cell).className = "fieldGrid fieldGrid-" + x + y;
+        container.appendChild(cell).className = "fieldGrid fieldGrid" + x + y;
     }
 }
 
-//initializing arrow keys to use in game
+//arrow keys to use in game
 
 const arrows = {
     up: 38,
@@ -65,8 +58,37 @@ firstFieldGrid.appendChild(player);
 
 // window.addEventListener("keydown", arrowKey);
 
+// $(".player").keydown(function() {
+//     switch (arrowKey) {
+//         case keys.right:
+//             position.y++;
+//             return;
+//         case keys.up:
+//             position.x--;
+//             return;
+//         case keys.down:
+//             position.x++;
+//             return;
+//     }
+
+//     let fieldGrid = document.querySelector(".fieldGrid" + position.x + "" + position.y);
+// })
+
+// window.addEventListener("keydown", arrowKey);
+
 button.addEventListener("click", playerMove);
 function playerMove () {
+    switch (arrowKey) {
+        case keys.moveRight:
+            position.y++;
+            return;
+        case keys.moveUp:
+            position.x--;
+            return;
+        case keys.moveDown:
+            position.x++;
+            return;
+    }
     let fieldGrid = document.querySelector(".fieldGrid" + position.x + "" + position.y);
 }
 
