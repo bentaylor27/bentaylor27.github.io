@@ -4,12 +4,11 @@
 const container = document.querySelector(".field");
 const gridBoxes = document.querySelectorAll(".fieldGrid");
 const gridArray = Array.from(gridBoxes);
-const button = document.getElementById(".buttons")
 let player = document.createElement("div");
 let position = {x: 0, y: 0};
 
-//function to make grid
 
+//function to make grid
 function makeGrid (rows, columns) {
     container.style.setProperty("grid-rows", rows);
     container.style.setProperty("grid-columns", columns);
@@ -40,57 +39,19 @@ player.style.backgroundColor = "orange";
 let firstFieldGrid = document.querySelector("fieldGrid");
 firstFieldGrid.appendChild(player);
 
-// function arrowKey(z) {
-//     switch (z.keyCode) {
-//         case keys.right:
-//             position.y++;
-//             break;
-//         case keys.up:
-//             position.x--;
-//             break;
-//         case keys.down:
-//             position.x++;
-//             break;
-//     }
-//     let fieldGrid = document.querySelector(".fieldGrid" + position.x + '' + position.y);
-//     fieldGrid.appendChild(player);
-// }
 
 // window.addEventListener("keydown", arrowKey);
 
-// $(".player").keydown(function() {
-//     switch (arrowKey) {
-//         case keys.right:
-//             position.y++;
-//             return;
-//         case keys.up:
-//             position.x--;
-//             return;
-//         case keys.down:
-//             position.x++;
-//             return;
-//     }
 
-//     let fieldGrid = document.querySelector(".fieldGrid" + position.x + "" + position.y);
-// })
-
-// window.addEventListener("keydown", arrowKey);
-
-button.addEventListener("click", playerMove);
-function playerMove () {
-    switch (arrowKey) {
-        case keys.moveRight:
-            position.y++;
-            return;
-        case keys.moveUp:
-            position.x--;
-            return;
-        case keys.moveDown:
-            position.x++;
-            return;
-    }
-    let fieldGrid = document.querySelector(".fieldGrid" + position.x + "" + position.y);
+//arrow key functions
+function moveRight(){
+const buttonRight = document.getElementById('goRight');
+buttonRight.addEventListener("click",  function () {
+    $("#player").append(".fieldGrid")
+    //insert logic here - append player to new div
+  });
 }
+//copy above for up and down
 
 
 //scoreboard layout from https://stackoverflow.com/questions/53946426/scoreboard-design-using-html-and-css and functionality from https://stackoverflow.com/questions/28822849/scoreboard-object-in-javascript
