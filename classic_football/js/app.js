@@ -43,15 +43,48 @@ firstFieldGrid.appendChild(player);
 // window.addEventListener("keydown", arrowKey);
 
 
-//arrow key functions
+//adding an id to each yard line on the field.
+// $(function () {
+//     $(".fieldGrid").attr("id", "yardLine");
+// })
+
+//arrow key functions\\
+//right button function
 function moveRight(){
 const buttonRight = document.getElementById('goRight');
 buttonRight.addEventListener("click",  function () {
-    $("#player").append(".fieldGrid")
-    //insert logic here - append player to new div
+    $("#player").detach("#start");
+    $("#player").appendTo("#negTen");
   });
 }
-//copy above for up and down
+
+$.when(moveRight()).then(function () {
+    $("#player").appendTo("#negTwenty");
+})
+
+    // $.when($("#player").appendTo("#negTwenty")).then(function() {
+    //     $("#player").appendTo("#negThirty");
+    // })
+
+// $("#player").appendTo("#negTwenty");
+
+//up button function
+function moveUp(){
+    const buttonRight = document.getElementById('goUp');
+    buttonRight.addEventListener("click",  function () {
+        $("#player").detach(".fieldGrid");
+        $("#player").appendTo(".fieldGrid");
+      });
+    }
+
+//down button function
+function moveDown(){
+    const buttonRight = document.getElementById('goDown');
+    buttonRight.addEventListener("click",  function () {
+        $("#player").detach(".fieldGrid");
+        $("#player").appendTo(".fieldGrid");
+        });
+    }
 
 
 //scoreboard layout from https://stackoverflow.com/questions/53946426/scoreboard-design-using-html-and-css and functionality from https://stackoverflow.com/questions/28822849/scoreboard-object-in-javascript
@@ -62,3 +95,6 @@ const scoreboard = function (score) {
         console.log(this.score + 6)
     }
 }
+
+
+//for the .when() functionality for the button: https://gist.github.com/cowboy/3399155
